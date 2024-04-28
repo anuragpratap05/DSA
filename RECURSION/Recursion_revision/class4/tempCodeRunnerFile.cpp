@@ -1,0 +1,1 @@
+and boxes[row][col] == false

@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int findKthLargest(vector<int> &nums, int k)
+{
+    priority_queue<int, vector<int>, greater<vector<int>>> pq;
+    int n = nums.size();
+
+    for(int i=0;i<n;i++)
+    {
+        pq.push(nums[i]);
+        if(pq.size()>k)
+        {
+            pq.pop();
+        }
+    }
+    return pq.top();
+}
+
+int main()
+{
+    return 0;
+}
